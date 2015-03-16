@@ -27,7 +27,7 @@ cleanall : clean
 	-rm -f $(THESIS).pdf
 
 s3 : $(THESIS).pdf
-	s3cmd put $< s3://sjtuthesis/README.pdf
+	s3cmd put $< s3://sjtuthesis/README_v0.7.pdf
 
 git :
 	git push gitlab
