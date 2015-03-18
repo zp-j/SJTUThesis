@@ -1,5 +1,7 @@
-*.pdf
-!statement.pdf
+*.bcf
+*.xml
+thesis.pdf
+README.pdf
 *.bak
 *.fls
 *.aux
