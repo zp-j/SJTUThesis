@@ -69,6 +69,8 @@
 \RequirePackage[perpage, bottom]{footmisc}
 \RequirePackage{enumitem}
 \RequirePackage{pdfpages}
+\RequirePackage{calc}
+\RequirePackage{algorithm, algorithmic}
 
 %==========
 % Segment 2. Define general-purpose LaTeX commands.
@@ -120,10 +122,12 @@
 \linespread{1.3}
 
 %% CTeX Settings
-% 目录名、表格索引、插图索引
+% 名称：目录、表格索引、插图索引、代码索引
 \CTEXoptions[contentsname={\sjtu@contentsname}]
 \CTEXoptions[listfigurename={\sjtu@listfigurename}]
 \CTEXoptions[listtablename={\sjtu@listtablename}]
+\renewcommand{\listalgorithmname}{\sjtu@listalgorithmname}
+\floatname{algorithm}{\sjtu@label@algo}
 % Title Settings at the chapter Level
 \CTEXsetup[nameformat={\Large\bfseries}]{chapter}
 \CTEXsetup[titleformat={\Large\bfseries}]{chapter}
@@ -162,10 +166,11 @@
 \renewcommand{\bottomfraction}{0.65}
 \renewcommand{\floatpagefraction}{0.60}
 
-% 定公式、图、表编号为"3-1"的形式，即分隔符由.变为短杠
+% 定公式、图、表、算法的编号为"3-1"的形式，即分隔符由.变为短杠
 \renewcommand{\theequation}{\arabic{chapter}--\arabic{equation}}
 \renewcommand{\thefigure}{\arabic{chapter}--\arabic{figure}}
 \renewcommand{\thetable}{\arabic{chapter}--\arabic{table}}
+\renewcommand{\thealgorithm}{\arabic{chapter}--\arabic{algorithm}}
 
 % Title
 \renewcommand{\lstlistingname}{\sjtu@value@listingname} %% 重命名Listings标题头
@@ -217,12 +222,6 @@
   \newtheorem{exmp}{\sjtu@label@exmp~}[chapter]
   \newtheorem{rem}{\sjtu@label@rem~}
   \newtheorem{case}{\sjtu@label@case~}
-\theoremstyle{break}
-  \newtheorem{bthm}[thm]{\sjtu@label@thm~}
-  \newtheorem{blem}[thm]{\sjtu@label@lem~}
-  \newtheorem{bprop}[thm]{\sjtu@label@prop~}
-  \newtheorem{bcor}[thm]{\sjtu@label@cor~}
-  \renewcommand{\proofname}{\bf\sjtu@label@proof}
 \newtheoremstyle{break}% name
   {}%      Space above, empty = `usual value'
   {}%      Space below
@@ -232,6 +231,12 @@
   {.}%        Punctuation after thm head
   {\newline}% Space after thm head: \newline = linebreak
   {}%         Thm head spec
+\theoremstyle{break}
+  \newtheorem{bthm}[thm]{\sjtu@label@thm~}
+  \newtheorem{blem}[thm]{\sjtu@label@lem~}
+  \newtheorem{bprop}[thm]{\sjtu@label@prop~}
+  \newtheorem{bcor}[thm]{\sjtu@label@cor~}
+  \renewcommand{\proofname}{\bf\sjtu@label@proof}
 
 %==========
 % Segment 4. Draw the sjtuthesis

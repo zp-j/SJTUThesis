@@ -8,17 +8,21 @@ LATEXMK_OPT = -xelatex -gg -silent -f
 
 all: $(THESIS).pdf
 
-.PHONY : all clean version release cleanall
+.PHONY : all clean version view
 
 $(THESIS).pdf : $(THESIS).tex $(TEX_DIR)/*.tex $(BIB_DIR)/*.bib sjtuthesis.cls sjtuthesis.cfg Makefile
 	-latexmk $(LATEXMK_OPT) $(THESIS)
 
+validate :
+	xelatex -no-pdf -halt-on-error $(THESIS)
+	bibtex $(THESIS)
+
+view : $(THESIS).pdf
+	open $<
+
 clean :
 	latexmk -C
 	-rm *.xdv *.bbl *.fls $(TEX_DIR)/*.xdv $(TEX_DIR)/*.aux $(TEX_DIR)/*.log $(TEX_DIR)/*.fls _tmp_.pdf
-
-cleanall : clean
-	-rm -f $(THESIS).pdf
 
 s3 : $(THESIS).pdf
 	s3cmd put $< s3://sjtuthesis/README_v0.7.pdf
