@@ -47,7 +47,7 @@
 % Segment 1. Import LaTeX packages.
 %==========
 
-\RequirePackage[top=3.5cm, bottom=2.5cm,left=3.5cm,right=2.5cm]{geometry} %设置版面
+\RequirePackage[centering,a4paper,body={16cm,22cm}]{geometry} %设置版面
 \RequirePackage{lastpage}
 \RequirePackage{fontspec}
 \RequirePackage{metalogo,doc}
@@ -284,12 +284,7 @@
   \end{tabular}
   \end{center}
   \vskip \stretch{0.5}
-  \clearpage
-  \if@openright
-    \cleardoublepage
-  \else
-    \clearpage
-  \fi
+  \cleardoublepage
 }
 
 
@@ -333,12 +328,7 @@
     \normalfont\sjtu@value@englishinstitute \vskip 30pt
     \normalfont\sjtu@value@englishdate \vskip 20pt
   \end{center}
-  \clearpage
-  \if@openright
-    \cleardoublepage
-  \else
-    \clearpage
-  \fi
+  \cleardoublepage
 }
 
 % 原创性声明
