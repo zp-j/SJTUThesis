@@ -400,6 +400,7 @@
 	    \fancyhead[RO]{\nouppercase{\small\kaishu\leftmark}}
 	    \fancyhead[LE]{\nouppercase{\small\kaishu\sjtu@value@titlemark}}
 	    \fancyfoot[C]{\small ---~{\bfseries\thepage}~---}
+	    \renewcommand{\headheight}{32pt}
 	  }
 	  %% 开章页页眉页脚
 	  \fancypagestyle{plain}{
@@ -408,6 +409,7 @@
 	    \fancyhead[RO]{\nouppercase{\small\kaishu\leftmark}}
 	    \fancyhead[LE]{\nouppercase{\small\kaishu\sjtu@value@titlemark}}
 	    \fancyfoot[C]{\small ---~{\bf\thepage}~---}
+	    \renewcommand{\headheight}{32pt}
 	  }
 	\else
 	%% 正文页
@@ -415,6 +417,7 @@
 	  \fancyhead[L]{\small\kaishu\sjtu@value@school\sjtu@value@degree\sjtu@label@thesis}
 	  \fancyhead[R]{\nouppercase{\small\kaishu\leftmark}}
 	  \fancyfoot[C]{\small ---~{\bf\thepage}~---}
+	  \renewcommand{\headheight}{32pt}
 	}
 	\fancypagestyle{plain}{
 	  \fancyhf{}
@@ -422,6 +425,7 @@
 	  \fancyhead[R]{\nouppercase{\small\kaishu\leftmark}}
 	  % \fancyhead[L]{\small {\it\sjtu@value@titlemark}}
 	  \fancyfoot[C]{\small ---~{\bf\thepage}~---}
+	  \renewcommand{\headheight}{32pt}
 	}
 	\fi
 \fi
