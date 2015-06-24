@@ -48,7 +48,6 @@
 %==========
 
 \RequirePackage[centering,a4paper,body={16cm,22cm}]{geometry} %设置版面
-\RequirePackage{indentfirst}
 \RequirePackage{lastpage}
 \RequirePackage{fontspec}
 \RequirePackage{metalogo,doc}
@@ -134,18 +133,12 @@
 \CTEXsetup[afterskip={12\p@}]{chapter}
 % Title Settings at the section Level
 \CTEXsetup[format={\large\bfseries}]{section}
-\CTEXsetup[beforeskip={-3ex \@plus -1ex \@minus -.2ex}]{section}
-\CTEXsetup[afterskip={1.0ex \@plus .2ex}]{section}
 % Title Settings at the subection Level
 \CTEXsetup[format={\bfseries\normalsize}]{subsection}
 \CTEXsetup[indent={0\ccwd}]{subsection}
-\CTEXsetup[beforeskip={-2.5ex \@plus -1ex \@minus -.2ex}]{subsection}
-\CTEXsetup[afterskip={1.0ex \@plus .2ex}]{subsection}
 % Title Settings at the subsubection Level
 \CTEXsetup[format={\normalfont\normalsize}]{subsubsection}
 \CTEXsetup[indent={0\ccwd}]{subsubsection}
-\CTEXsetup[beforeskip={-2ex \@plus -1ex \@minus -.2ex}]{subsubsection}
-\CTEXsetup[afterskip={1.0ex \@plus .2ex}]{subsubsection}
 
 % bullets in the item
 \renewcommand{\labelitemi}{\ensuremath{\bullet}}
