@@ -208,6 +208,15 @@
 \bibliographystyle{bst/GBT7714-2005NLang}
 
 % 定理环境
+\newtheoremstyle{break}% name
+  {}%      Space above, empty = `usual value'
+  {}%      Space below
+  {\itshape}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
 \theoremstyle{plain}
   \newtheorem{algo}{\sjtu@label@algo~}[chapter]
   \newtheorem{thm}{\sjtu@label@thm~}[chapter]
@@ -220,15 +229,6 @@
   \newtheorem{exmp}{\sjtu@label@exmp~}[chapter]
   \newtheorem{rem}{\sjtu@label@rem~}
   \newtheorem{case}{\sjtu@label@case~}
-\newtheoremstyle{break}% name
-  {}%      Space above, empty = `usual value'
-  {}%      Space below
-  {\itshape}% Body font
-  {}%         Indent amount (empty = no indent, \parindent = para indent)
-  {\bfseries}% Thm head font
-  {.}%        Punctuation after thm head
-  {\newline}% Space after thm head: \newline = linebreak
-  {}%         Thm head spec
 \theoremstyle{break}
   \newtheorem{bthm}[thm]{\sjtu@label@thm~}
   \newtheorem{blem}[thm]{\sjtu@label@lem~}
@@ -236,6 +236,8 @@
   \newtheorem{bcor}[thm]{\sjtu@label@cor~}
   \renewcommand{\proofname}{\bf\sjtu@label@proof}
 
+=======
+>>>>>>> 0ad9f10... Fix theorem break warning.
 %==========
 % Segment 4. Draw the sjtuthesis
 %==========
