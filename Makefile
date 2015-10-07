@@ -8,7 +8,7 @@ LATEXMK_OPT = -xelatex -gg -silent -f
 
 all: $(THESIS).pdf
 
-.PHONY : all clean validate view wordcount
+.PHONY : all clean validate view wordcount git
 
 $(THESIS).pdf : $(THESIS).tex $(TEX_DIR)/*.tex $(BIB_DIR)/*.bib sjtuthesis.cls sjtuthesis.cfg Makefile
 	-latexmk $(LATEXMK_OPT) $(THESIS)
@@ -36,4 +36,3 @@ git :
 	git push gitlab
 	git push github
 	git push gitcafe
-
